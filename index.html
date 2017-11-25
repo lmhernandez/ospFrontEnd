@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>OSP - Desafío</title>
+    <link rel="icon" type="image/png" href="" />
+    <link rel="image_src" type="image/jpeg" href="/produccion/produccion/img/shieldev.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="author" content="Luis Hernández">
+    <meta name="description" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="produccion/css/bootstrap.min.css">
+    <link rel="stylesheet" href="produccion/css/flaty.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="produccion/css/chosen.css">
+    <link rel="stylesheet" href="produccion/css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="produccion/css/main.css">
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="header">
+                <div class="header__logo">
+                    <img class="logo-img" src="produccion/img/logo.jpg" alt="">
+                </div>
+                <div class="header__user">
+                    <div class="user--avatar">
+                        <img class="avatar-img" src="produccion/img/avatar.png" alt="">
+                    </div>
+                    <div class="user--text">
+                        <h3>Admin</h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="contenedor">
+
+
+            <div class="row">
+                <aside class="col-xs-12 col-md-3 col-lg-2">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item  list-group-item-action ">
+                            Dashboard
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action  active">Películas
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Turnos
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Administradores
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Perfil
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Cerrar Sesión
+                        </a>
+                    </div>
+                </aside>
+                <section class="col-xs-12 col-md-9 col-lg-10">
+                    <div class="movie">
+                        <div class="movie__header">
+                            <h2>Películas</h2>
+                            <button type="button" class="btn btn-primary btn-lg  openModal">Nueva Película</button>
+
+                        </div>
+                        <div class="movie__body">
+                            <table class="table table-striped table-hover table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>F. Publicacion</th>
+                                        <th>Estado</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="tbody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div id="modal1" class="modal  reset_title">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content  modalMovie">
+                                <div class="modal-header">
+                                    <h3 class="modal-title title_new">Nueva Pelicula</h3>
+                                    <h3 class="modal-title title_edit  hide">Editar Pelicula</h3>
+                                    <button type="button" class="close  reset_title" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="name_movie">Nueva Película</label>
+                                            <input type="text" class="form-control  name validate" id="name_movie" placeholder="Ingresa Nombre" name="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="date_movie">Fecha de Publicación</label>
+                                            <input data-provide="datepicker" date-format="dd/mm/yyyy" type="text" class="form-control  fecha datepicker" id="date_movie" placeholder="Ingresa Fecha" name="date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Estado</label>
+                                            <select class="chosen-select status" name="status">
+                                                <option value="">Seleccione Estado</option>
+                                                <option value="Activo">Activo</option>
+                                                <option value="Inactivo">Inactivo</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                    
+
+                                </div>
+                                <div class="modal-footer  col-xs-12">
+                                    <button type="button" class="btn btn-primary  mg_auto  saveMovie  reset_title">Guardar Pelicula</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="produccion/js/jquery.js"></script>
+    <script src="produccion/js/bootstrap.min.js"></script>
+    <script src="produccion/js/jquery.validate.js"></script>
+    <script src="produccion/js/m_es_PE.min.js"></script>
+    <script src="produccion/js/datepicker.min.js"></script>
+    <script src="produccion/js/datepicker.es.min.js"></script>
+    <script src="produccion/js/chosen.min.js"></script>
+    <script src="produccion/js/myapp.js"></script>
+</body>
+
+</html>
